@@ -1,0 +1,944 @@
+{
+  "intents": [
+    {
+      "intent": "General_About_you",
+      "examples": [
+        {
+          "text": "Can you tell me your name"
+        },
+        {
+          "text": "May I know your name please"
+        },
+        {
+          "text": "Please enter your name to check out items"
+        },
+        {
+          "text": "Please provide your name"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "halo"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "no",
+      "examples": [
+        {
+          "text": "I dont want to"
+        },
+        {
+          "text": "No"
+        },
+        {
+          "text": "no nothing"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order_products",
+      "examples": [
+        {
+          "text": "deliver items"
+        },
+        {
+          "text": "I want to order"
+        },
+        {
+          "text": "I want to order products"
+        },
+        {
+          "text": "order"
+        },
+        {
+          "text": "order items"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "payment",
+      "examples": [
+        {
+          "text": "Card"
+        },
+        {
+          "text": "Cash on delivery"
+        },
+        {
+          "text": "COD"
+        },
+        {
+          "text": "i want to pay using card"
+        },
+        {
+          "text": "I want to use card"
+        },
+        {
+          "text": "I will pay by cash"
+        },
+        {
+          "text": "UPI"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "products_enquiry",
+      "examples": [
+        {
+          "text": "give me a list of products"
+        },
+        {
+          "text": "items"
+        },
+        {
+          "text": "list of items"
+        },
+        {
+          "text": "List of items in your store"
+        },
+        {
+          "text": "List of products"
+        },
+        {
+          "text": "List of products which can be delivered"
+        },
+        {
+          "text": "products"
+        },
+        {
+          "text": "some more products"
+        },
+        {
+          "text": "Tell me what all items are available for delivery"
+        },
+        {
+          "text": "What products are deliverable?"
+        },
+        {
+          "text": "Which all items are available for delivery?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "yes",
+      "examples": [
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "Yes I want to"
+        },
+        {
+          "text": "Yes I would like to"
+        },
+        {
+          "text": "yup"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "beverages",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Beverages",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cleaning",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Cleaners",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cleaning and household",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cleaning & Household",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "dairy",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Dairy",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "fruitsandvegetables",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Fruits & Vegetables",
+          "synonyms": [
+            "Fruits and Vegetables"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ordered_product",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Apple",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Banana",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Carrot",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cheese",
+          "synonyms": [
+            "AMUL Cheese ",
+            "AMUL Cheese Slices"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "coconut oil",
+          "synonyms": [
+            " Parachute",
+            "Pure Coconut Oil"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Coffee",
+          "synonyms": [
+            "Bru Coffee",
+            "Bru Instant Coffee"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Detergent",
+          "synonyms": [
+            "Surf Excel",
+            "Surf Excel Detergent"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dishwash",
+          "synonyms": [
+            "Dishwash Liquid Gel",
+            "Vim",
+            "Vim Dishwash Liquid Gel",
+            "Vim Liquid Gel"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Floor cleaner",
+          "synonyms": [
+            "Lizol",
+            "Lizol Disinfectant Surface & Floor Cleaner Liquid "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ghee",
+          "synonyms": [
+            "AMUL Ghee"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Juice",
+          "synonyms": [
+            "Orange Juice",
+            "Tropicana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "milk",
+          "synonyms": [
+            "AMUL TAAZA Fresh Toned Milk",
+            "Fresh Toned Milk"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Onion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "paneer",
+          "synonyms": [
+            "AMUL Malai Paneer "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sanitizer",
+          "synonyms": [
+            "Hand Sanitizer",
+            "Lifebuoy Alcohol Based Germ Protection Hand Sanitizer"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "shampoo",
+          "synonyms": [
+            "Sunsilk Nourishing Soft & Smooth Shampoo",
+            "Sunsilk shampoo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tea",
+          "synonyms": [
+            "Red Label",
+            "Red Label Tea"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Toilet Cleaner",
+          "synonyms": [
+            "Harpic",
+            "Harpic Disinfectant Toilet Cleaner",
+            "Harpic Toilet Cleaner"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tomato",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "toothpaste",
+          "synonyms": [
+            "colgate",
+            "colgate paste",
+            "Colgate Strong Teeth Anticavity Toothpaste With Amino Shakti",
+            "colgate toothpaste"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "personalcare",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Personal care",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1604157728232",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want anything else?(Yes/No)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1604157728232",
+      "conditions": "",
+      "dialog_node": "node_10_1604160484105",
+      "previous_sibling": "node_3_1604159098200"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Order will be delivered to $address.\nThank you for shopping. Stay safe and healthy."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1604250285920",
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1604251868148"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "These are the list of items available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "List of items",
+            "options": [
+              {
+                "label": "Fruits & Vegetables",
+                "value": {
+                  "input": {
+                    "text": "Fruits & Vegetables"
+                  }
+                }
+              },
+              {
+                "label": "Dairy",
+                "value": {
+                  "input": {
+                    "text": "Dairy"
+                  }
+                }
+              },
+              {
+                "label": "Beverages",
+                "value": {
+                  "input": {
+                    "text": "Beverages"
+                  }
+                }
+              },
+              {
+                "label": "Personal care",
+                "value": {
+                  "input": {
+                    "text": "Personal care "
+                  }
+                }
+              },
+              {
+                "label": "Cleaning & Household",
+                "value": {
+                  "input": {
+                    "text": "Cleaning & Household"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#products_enquiry",
+      "dialog_node": "node_1_1603042872750",
+      "previous_sibling": "node_9_1603992158807"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Parachute 100% Pure Coconut Oil 600ml Rs  220\nSunsilk Nourishing Soft & Smooth Shampoo 330ml Rs 240\nLifebuoy Alcohol Based Germ Protection Hand Sanitizer 50ml bottle Rs 23.25\nColgate Strong Teeth Anticavity Toothpaste With Amino Shakti - Saver Pack 500g Rs 184.50"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "conditions": "@personalcare",
+      "dialog_node": "node_1_1603995959251",
+      "previous_sibling": "node_2_1603995929236"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "productname": "@ordered_product"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@ordered_product",
+      "dialog_node": "node_1_1604157728232",
+      "previous_sibling": "node_1_1603042872750"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Red Label Tea 2x500 g Multipack Rs 135\nBru Instant Coffee 200 g Pouch Rs  280(10% discount)\nTropicana 100% Orange Juice 2x1 L Multipack Rs 222"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "conditions": "@beverages",
+      "dialog_node": "node_2_1603995929236",
+      "previous_sibling": "node_5_1603995883781"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok will deliver $productname to your location"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1604157728232",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1604160484105"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_3_1604159098200"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1603992158807",
+      "context": {
+        "username": "<? input.text ?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_3_1604237419680"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Apple 1kg  Rs 110\nBanana 1kg Rs 55\nCarrot 1kg Rs 109\nOnion 1kg Rs 132\nTomato 1kg Rs 27"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "conditions": "@fruitsandvegetables",
+      "dialog_node": "node_4_1603995815521"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "AMUL Malai Paneer 200g Rs 50(20% discount)\nAMUL TAAZA Fresh Toned Milk 500ml Rs 33\nAMUL Cheese Slices Rs 60(10% discount)\nAMUL Ghee 500ml Rs 110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "conditions": "@dairy",
+      "dialog_node": "node_5_1603995883781",
+      "previous_sibling": "node_4_1603995815521"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$username,please enter your address "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1604160484105",
+      "conditions": "#no",
+      "dialog_node": "node_5_1604221982280",
+      "previous_sibling": "node_8_1604221384518"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is your mode of payment?\nCOD,Card,UPI available"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1604221982280",
+      "context": {
+        "address": "<? input.text ?>"
+      },
+      "conditions": "\"<? input.text ?>\"",
+      "dialog_node": "node_6_1604248796055"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vim Dishwash Liquid Gel - Lemon 150ml pouch Rs  20\nHarpic Disinfectant Toilet Cleaner - Original, Power Plus Rs 60\nLizol Disinfectant Surface & Floor Cleaner Liquid 500ml Rs 38.50\nSurf Excel Detergent 1l pouch Rs 150"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "conditions": "@cleaning",
+      "dialog_node": "node_7_1603995994194",
+      "previous_sibling": "node_1_1603995959251"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please tell me what else you need.."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1604160484105",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1604157728232"
+      },
+      "conditions": "#yes",
+      "dialog_node": "node_8_1604221384518"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am a virtual assistant to help you shop during this pandemic. What should I call you? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#General_About_you",
+      "dialog_node": "node_9_1603992158807",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your mode of payment is accepted. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Please enter phone number"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1604248796055",
+      "conditions": "#payment",
+      "dialog_node": "node_9_1604250285920"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "These are the list of items available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "List of Products",
+            "options": [
+              {
+                "label": "Vegetables and Fruits",
+                "value": {
+                  "input": {
+                    "text": "Vegetables and Fruits"
+                  }
+                }
+              },
+              {
+                "label": "Personal care",
+                "value": {
+                  "input": {
+                    "text": "Personal care"
+                  }
+                }
+              },
+              {
+                "label": "Staples",
+                "value": {
+                  "input": {
+                    "text": "Staples"
+                  }
+                }
+              },
+              {
+                "label": "Bakery",
+                "value": {
+                  "input": {
+                    "text": "Bakery"
+                  }
+                }
+              },
+              {
+                "label": "Dairy products",
+                "value": {
+                  "input": {
+                    "text": "Dairy products"
+                  }
+                }
+              },
+              {
+                "label": "Snacks",
+                "value": {
+                  "input": {
+                    "text": "Snacks"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1603042872750",
+      "disabled": true,
+      "dialog_node": "response_8_1603992403051",
+      "previous_sibling": "node_7_1603995994194"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1603992158807"
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
